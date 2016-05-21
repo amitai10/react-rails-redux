@@ -31,6 +31,8 @@ gem 'react-rails'
 
 gem 'browserify-rails'
 
+gem 'faker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -42,4 +44,3 @@ gem 'browserify-rails'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
