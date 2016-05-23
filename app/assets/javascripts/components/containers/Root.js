@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom'
 import { Provider } from 'react-redux';
+import PhoneBookApp from './PhoneBookApp';
 import CounterApp from './CounterApp';
 import configureStore from '../store/configureStore';
-import {setCounter} from '../actions/counter'
+import { fetch_contacts } from '../actions/phone_book'
 
 const store = configureStore();
 
 export default class Root extends Component {
   componentWillMount() {
-    store.dispatch(setCounter(this.props.counter));
+    store.dispatch(fetch_contacts);
   }
   render() {
     return (
       <Provider store={store}>
-        <CounterApp />
+        <PhoneBookApp />
       </Provider>
     );
   }
